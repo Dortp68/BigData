@@ -7,7 +7,7 @@
 ### Веб-интерфейс resourcemanager
 ![](https://github.com/Dortp68/BigData/blob/main/Screenshots/wA4S7OITdP4.jpg)
 ## Блок 2. Написание map reduce на Python
-Используя реализованные скрипты [mapper.py](https://github.com/Dortp68/BigData/blob/main/mapper.py) и [reducer.py](https://github.com/Dortp68/BigData/blob/main/reducer.py) рассчитал среднее значение и дисперсию по признаку "price". Сперва загрузил датасет на hdfs, для запуска mapreduce использовался hadoop streaming:
+Используя реализованные скрипты [mapper.py](https://github.com/Dortp68/BigData/blob/main/mapper.py) и [reducer.py](https://github.com/Dortp68/BigData/blob/main/reducer.py) рассчитал среднее значение и дисперсию по признаку "price". Датасет предобработал, оставив только столбец price и удалив все нулевые значения. Загрузил датасет на hdfs, для запуска mapreduce использовался hadoop streaming:
 
 mapred streaming \
 -files mapper.py,reducer.py \
