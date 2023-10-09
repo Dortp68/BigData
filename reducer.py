@@ -11,24 +11,19 @@ def reduce(c1, c2, m1, m2, v1, v2):
 
 
 def main():
-    sizes = []
-    means = []
-    variances = []
+    line1 = sys.stdin.readline().strip()
+    sp, mp, vp = line1.split()
+    sp = int(s)
+    mp = float(m)
+    vp = float(v)
+    for line in sys.stdin:
+        s, m, v = line.split()
+        s = int(s)
+        m = float(m)
+        v = float(v)
+        cp, mp, vp = reduce(cp, c, mp, m, vp, v)
 
-    line = sys.stdin.readline().strip()
-    while line:
-        data = line.split("\t")
-        sizes += [int(data[0])]
-        means += [float(data[1])]
-        variances += [float(data[2])]
-        line = sys.stdin.readline().strip()
-
-    c, m, v = sizes[0], means[0], variances[0]
-
-    for i in range(1, len(sizes)):
-        c, m, v = reduce(c, sizes[i], m, means[i], v, variances[i])
-
-    print(v)
+    print(mp, vp)
 
 
 if __name__ == "__main__":
