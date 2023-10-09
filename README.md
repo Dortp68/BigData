@@ -18,7 +18,7 @@ mapred streaming \
 
 Также среднее и дисперсия была посчитана в [блокноте](https://github.com/Dortp68/BigData/blob/main/Untitled.ipynb).
 
-### Резeльтаты:
+### Результаты:
 python -
 mean: 152.75505277800508
 variance: 57681.75384084372
